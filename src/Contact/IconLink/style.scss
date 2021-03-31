@@ -1,0 +1,13 @@
+.icon-link {
+  animation: fadeIn ease 2s;
+  color: rgba(0, 0, 0, 0.65);
+  margin: 2rem;
+  font-size: 5rem;
+  &:hover {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  @media(max-width: 576px) {
+    margin: 0.5rem;
+    font-size: 2rem;
+  }
+}

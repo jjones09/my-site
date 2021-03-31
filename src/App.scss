@@ -1,0 +1,109 @@
+.App {
+  text-align: left;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.App-header {
+  text-align: left;
+  font-size: 10rem;
+  letter-spacing: 0.5rem;
+  font-weight: 500;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  color: rgba(0, 0, 0, 0.8);
+  @media(max-width: 576px) {
+    font-size: 5rem;
+    letter-spacing: 0.25rem;
+  }
+  animation: fadeIn ease 4s;
+}
+
+header {
+  user-select: none;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes typeText {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+.Subheader {
+  font-size: 2rem;
+  letter-spacing: 0.25rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.65);
+  @media(max-width: 576px) {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+  }
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typeText 2s steps(60, end);
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes highlightLink {
+  100% { font-size: 2.2rem; }
+}
+
+.link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @media(max-width: 576px) {
+    flex-direction: column;
+    .link {
+      margin: 1.5rem 0;
+    }
+  }
+  @media(min-width: 576px) {
+    width: 50%;
+    height: 2.5rem;
+    margin: 2.5rem auto;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+  }
+  opacity: 0;
+  animation: fadeIn ease 2s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  .link {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.65);
+    text-decoration: none;
+  }
+  .link:hover {
+    animation: highlightLink 0.5s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes expandLine {
+  0% { width: 0; opacity: 0; }
+  1% { opacity: 100%; }
+  100% { width: 100%; opacity: 100%; }
+}
+
+.line-container {
+  hr {
+    width: 0;
+    opacity: 0;
+    margin: 2rem auto;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    animation: expandLine ease 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+.content-container {
+  animation: fadeIn ease 1s;
+}
